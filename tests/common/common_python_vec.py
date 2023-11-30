@@ -160,6 +160,33 @@ class Data:
         ]
     }
 
+    same_sized_signed_int_return_type_dict = {
+        "bool": "std::int8_t",
+        "char": "std::int8_t",
+        "int": "std::int32_t",
+        "float": "std::int32_t",
+        "double": "std::int64_t",
+        "sycl::half": "std::int16_t",
+        "signed char": "std::int8_t",
+        "unsigned char": "std::int8_t",
+        "short": "std::int16_t",
+        "unsigned short": "std::int16_t",
+        "unsigned int": "std::int32_t",
+        "long": "std::int64_t",
+        "unsigned long": "std::int64_t",
+        "long long": "std::int64_t",
+        "unsigned long long": "std::int64_t",
+        "sycl::byte": "std::int8_t",
+        "std::int8_t": "std::int8_t",
+        "std::int32_t": "std::int32_t",
+        "std::uint8_t": "std::int8_t",
+        "std::int16_t": "std::int16_t",
+        "std::uint16_t": "std::int16_t",
+        "std::uint32_t": "std::int32_t",
+        "std::int64_t": "std::int64_t",
+        "std::uint64_t": "std::int64_t",
+    }
+
 class ReverseData:
     rev_standard_type_dict = { Data.standard_type_dict[k] : k for k in list(Data.standard_type_dict.keys()) }
     rev_fixed_width_type_dict = { Data.fixed_width_type_dict[k] : k for k in list(Data.fixed_width_type_dict.keys()) }
